@@ -26,7 +26,6 @@ const StickyInstallBannerLazy = lazy(() =>
 const CookieConsent = lazy(() => import('./components/ui/CookieConsent'));
 
 const Dashboard = lazy(() => import('./components/dashboard/Dashboard'));
-const PremiumPage = lazy(() => import('./components/premium/PremiumPage'));
 const AdminPage = lazy(() => import('./components/admin/AdminPage'));
 const QuizEngine = lazy(() => import('./components/quiz/QuizEngine'));
 
@@ -463,9 +462,6 @@ function AppContent() {
             )}
             {page === 'profile' && !isGuest && (
               <ProfilePage onNavigate={navigate} />
-            )}
-            {page === 'premium' && !isGuest && (
-              <PremiumPage onNavigate={navigate} />
             )}
             {page === 'research' && !isGuest && (
               <ResearchEngine onNavigate={navigate} />

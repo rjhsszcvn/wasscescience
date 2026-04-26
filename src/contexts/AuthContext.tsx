@@ -78,9 +78,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const isGuest = !user;
 
-  const isPremium = (() => {
-    if (!profile?.premium_expires_at) return false;
-    return new Date(profile.premium_expires_at) > new Date();
+  const isPremium = (() => {return true;
   })();
 
   async function fetchProfile(userId: string) {
